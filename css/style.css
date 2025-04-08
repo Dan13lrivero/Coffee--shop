@@ -13,8 +13,12 @@
     text-decoration: none;
     transition: 0.2s  linear;
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
  }
  body {
+    background-color: var(--bg);
+ }
+ .bg-custom {
     background-color: var(--bg);
  }
  section {
@@ -33,6 +37,9 @@
  } 
 .nabvar-custom {
     background-color: var(--bg);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 1030; /* para que esté sobre el contenido */
 }
  .header section {
     display: flex;
@@ -78,6 +85,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    padding-top: 100px;
 }
 .home-container section {
     display: flex;
@@ -106,16 +114,14 @@
     font-size: 4rem;
     color: var(--main-color);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: -150px;
 }
 .title span {
     color: #fff;
 }
 .about .row {
-    display: flex;
-    align-items: center;
     background-color: var(--black);
-    gap: 1.5rem;
+    
     border-radius: 1.5rem;
 }
 .about .row .content {
@@ -125,30 +131,43 @@
 font-size: 3rem;
 color: #fff;
 }
-.about .row .content p {
-    font-size: 1.6rem;
-    color: #fff;
-    padding: 1rem 0;
-    line-height: 1.8;
-}
 .box-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
-.manu {
-    width: 100%;
+.menu {
     display: flex;
     justify-content: center;
-}
-.menu .box-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  
+  .menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
     padding: 0 1rem;
-}
+    justify-items: center;
+    box-sizing: border-box;
+  }
+  
+  
 .menu .box-container .box {
     text-align: center;
     border: var(--border);
@@ -228,3 +247,166 @@ color: #fff;
 .footer .share img:hover {
     background-color: var(--main-color);
 }
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--main-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .navbar-collapse .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-collapse .nav-item {
+      margin: 1rem 0;
+    }
+  
+    .navbar-toggler {
+      z-index: 10000; /* por encima del overlay */
+    }
+  
+    .navbar-collapse.collapse:not(.show) {
+      display: none !important;
+    }
+  }
+  
+
+  @media (max-width: 991.98px) {
+    .review .box-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+        gap: 2rem; /* espacio entre las cajas */
+    }
+}
+/* Para pantallas grandes (desktops grandes) */
+@media (min-width: 1200px) {
+    .menu .box-container {
+      grid-template-columns: repeat(3, 1fr);
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Para pantallas medianas (laptops/tablets) */
+  @media (max-width: 1199.98px) {
+    .menu .box-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      margin: 0 auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+  }
+  
+  /* Para pantallas pequeñas (tablets verticales, móviles grandes) */
+  @media (max-width: 768px) {
+    .menu .box-container {
+      grid-template-columns: 1fr;
+      width: 95%;
+      padding: 0 1rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+  
+    .menu .box-container .box {
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media (max-width: 320px) and (max-height: 768px) {
+    .menu {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu .box-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+  
+    .menu .box-container .box {
+      width: 90%;
+      padding: 2rem 1rem;
+    }
+  }
+  
+  
+  /* Aseguramos que las imágenes no desborden en ningún tamaño */
+  .menu .box-container .box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+@media (max-width: 576px) {
+    .review .box-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+    
+    .review .box-container .box {
+        padding: 1rem; /* ajustar padding en pantallas pequeñas */
+    }
+}
+.map {
+    width: 80%;  /* El mapa ocupará el 80% del ancho de la pantalla */
+    height: 400px; /* Establece una altura fija */
+    margin: 0 auto; /* Centra el mapa horizontalmente */
+    display: block; /* Para que no se superponga al contenido */
+}
+
+@media (max-width: 768px) {
+    .map {
+        width: 100%; /* En pantallas pequeñas, el mapa ocupará el 100% del ancho */
+        height: 300px; /* Ajustamos la altura para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .map {
+        width: 100%; /* El mapa sigue ocupando el 100% del ancho en pantallas más pequeñas */
+        height: 250px; /* Ajustamos aún más la altura en pantallas muy pequeñas */
+    }
+}
+@media screen and (max-width: 480px) {
+    .menu {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .menu .box-container {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu .box-container .box {
+      width: 90%;
+      max-width: 320px;
+      padding: 2rem 1rem;
+    }
+  }
+  
