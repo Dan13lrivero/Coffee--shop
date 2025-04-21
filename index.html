@@ -5,51 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="./assets/img/icons8-cafe-50.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="./css/style.css">
     <title>Coffe Shop</title>
 </head>
 <body>
-    <header class="header">
-        <section class="d-flex justify-content-center">
-
-        <nav class="navbar navbar-expand-lg bg-custom">
-            <div class="container-fluid justify-content-between">
-              <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
+<header class="header">
+  <section class="d-flex justify-content-center">
+      <nav class="navbar navbar-expand-lg bg-custom">
+          <div class="container-fluid justify-content-between">
+              <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
               </button>
               <a class="navbar-brand mx-auto" href="#">
-                <img src="./assets/img/logo.png" alt="logo">
+                  <img src="./assets/img/logo.png" alt="logo">
               </a>
               <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                <ul class="navbar-nav text-center">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#reviews">Reviews</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#address">Address</a>
-                  </li>
-                </ul>
-                <div class="icons">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/search--v1.png" alt="search--v1"/>
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1"/>  
-                </div>
+                  <ul class="navbar-nav text-center">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Close">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Close">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#menu" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Close">Menu</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#reviews" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Close">Reviews</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#address" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Close">Address</a>
+                      </li>
+                  </ul>
+                  <div class="icons">
+                      <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/search--v1.png" alt="search--v1"/>
+                      <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1"/>  
+                  </div>
               </div>
-            </div>
-          </nav>
-          </section>
-    </header>
-    <div class="home-container container">
+          </div>
+      </nav>
+  </section>
+</header>   
+     <div class="home-container container">
         <section id="home" class="pt-5 mt-5 py-5 my-5">
             <div class="content">
                 <h1>Great code starts with great coffee.</h1>
@@ -66,12 +66,9 @@
         <h2 class="title text-center mb-2">About  <span>Us</span></h2>
 <section id="about" class="about  py-1 my-5">
     <div class="row align-items-center">
-      <!-- Imagen a la izquierda en pantallas md+ -->
       <div class="col-md-6 mb-4 mb-md-0">
         <img src="./assets/img/about-img.jpg" alt="about us" class="img-fluid w-100">
       </div>
-
-      <!-- Texto a la derecha -->
       <div class="col-md-6 mt-0">
         <div class="text-content mt-1">
           <h3 class="mb-4 text-white">The Secret Behind Our Special Coffee</h3>
@@ -86,9 +83,6 @@
       </div>
     </div>
 </section>
-
-          
-          
         <h2 class="title text-center mb-2">Discover <span>Our</span> Menu</h2>
         <section class="menu py-5 my-5" id="menu">
             
@@ -179,16 +173,25 @@
         <h2 class="title text-center mb-2">Our <span>Address</span> </h2>
         <section class="address py-5 my-5" id="address">
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114976.9195200531!2d-80.31844581907716!3d25.769614409994695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b170596dc767%3A0x474733c02a5fa5da!2sImperial%20Moto%20Caf%C3%A9!5e0!3m2!1ses!2suy!4v1743953163430!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-            <section class="footer py-5 my-5">
-                <div class="share">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="instagram-new"/>
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="facebook-new"/>
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/twitterx--v1.png" alt="twitterx--v1"/>
+            <section class="footer py-1 my-5">
+                <div class="share d-flex justify-content-center">
+                    <a target="_blank" href="">
+                        <img class="img-fluid" src="./assets/img/wpp.png" alt="logo de wpp">
+                    </a>
+                    <a target="_blank" href="">
+                        <img class="img-fluid" src="./assets/img/fb.png" alt="lgoo de fb">
+                    </a>
+                    <a target="_blank" href="">
+                        <img class="img-fluid" src="./assets/img/ig.png" alt="logo de ig">
+                    </a>
+                    <a target="_blank" href="">
+                        <img class="img-fluid" src="./assets/img/gmail.png" alt="logo de gmail">
+                    </a>
                 </div>
             </section>
         </section>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
