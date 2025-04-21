@@ -50,4 +50,4 @@ Coffee--shop/
 Have questions or suggestions? Feel free to reach out:
 
 - GitHub: [dan13lrivero](https://github.com/dan13lrivero)
-- Email: [youremail@example.com](mailto:jorgedanielriveroc@gmail.com)
+- Email: jorgedanielriveroc@gmail.com
