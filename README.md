@@ -14,12 +14,12 @@ Co[de]ffee is a modern and responsive landing page for a fictional coffee shop t
 
 ## 🛠️ Technologies Used
 
-- HTML5  
-- CSS3  
-- Bootstrap 5.3  
-- JavaScript  
-- Google Fonts (Roboto)  
-- Icons8  
+<p>
+  <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML5"/>
+  <img src="https://img.icons8.com/color/48/css3.png" alt="CSS3"/>
+  <img src="https://img.icons8.com/color/48/bootstrap.png" alt="Bootstrap"/>
+  <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript"/>
+</p>
 
 ## 📸 Features
 
